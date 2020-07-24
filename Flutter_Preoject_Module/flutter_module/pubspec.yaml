@@ -1,4 +1,4 @@
-name: my_flutter
+name: flutter_module
 description: A new flutter module project.
 
 # The following defines the version and build number for your application.
@@ -31,9 +31,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  flutter_module:
-    path: /Users/touch/Github550709871/project_flutter_module/Flutter_Preoject_Module/flutter_module
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -85,5 +82,5 @@ flutter:
   # identifiers, which may be completely independent or the same as these.
   module:
     androidX: true
-    androidPackage: com.example.my_flutter
-    iosBundleIdentifier: com.example.myFlutter
+    androidPackage: com.example.flutter_module
+    iosBundleIdentifier: com.example.flutterModule

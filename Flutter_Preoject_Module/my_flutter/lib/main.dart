@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:my_flutter/first.dart';
 import 'package:my_flutter/second.dart';
+import 'package:flutter_module/main.dart';
 
 void main() => runApp(new MyApp(window.defaultRouteName));
 
@@ -18,10 +19,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: _widgetForRoute(_routeName),
-      routes: <String, WidgetBuilder>{
-        '/first': (BuildContext context) => new MyFirstPage(),
-        '/second': (BuildContext context) => new MySecondPage(),
-      },
     );
   }
 }
@@ -29,8 +26,10 @@ class MyApp extends StatelessWidget {
 Widget _widgetForRoute(String s) {
   print("pageName=" + _getPageName(s) + ",ParamJson=" + _getPageParamJsonStr(s));
   switch (_getPageName(s)) {
-    case "demo":
+    case "demo0":
       return new MySecondPage();
+    case "demo":
+      return new MyHomePage();
   }
   return MyFirstPage();
 }
