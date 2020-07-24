@@ -24,14 +24,11 @@ class MainActivity : AppCompatActivity() {
     fun createAction() {
         click_btn.setOnClickListener {
             Log.e("Clicked", "this is my clicked!!!!")
-//            val intent = MainFlutterActivity.createDefaultIntent(this)
             val intent = Intent()
             intent.setClass(this, MainFlutterActivity::class.java)
-            intent.putExtra("route", "/second")
+            intent.putExtra("route", "demo?{\"id\":112233}")
             startActivity(intent)
         }
-
-//        GeneratedPluginRegistrant.registerWith(FlutterEngine(this, null))
     }
 }
 
