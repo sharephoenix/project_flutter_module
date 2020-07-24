@@ -27,9 +27,9 @@ Widget _widgetForRoute(String s) {
   print("pageName=" + _getPageName(s) + ",ParamJson=" + _getPageParamJsonStr(s));
   switch (_getPageName(s)) {
     case "demo0":
-      return new MySecondPage();
-    case "demo":
       return new MyHomePage();
+    case "demo":
+      return new MySecondPage();
   }
   return MyFirstPage();
 }

@@ -20,10 +20,9 @@ class MainFlutterActivity: FlutterActivity(), MethodChannel.MethodCallHandler {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-        GeneratedPluginRegistrant.registerWith(flutterEngine)
-
+        val channel = GeneratedPluginRegistrant.registerWith(flutterEngine)
+        channel.setMethodCallHandler(this)
     }
-
 
     override fun onMethodCall(call: MethodCall, result: MethodChannel.Result) {
         //通过MethodCall可以获取参数和方法名，然后再寻找对应的平台业务，本案例做了2个跳转的业务
